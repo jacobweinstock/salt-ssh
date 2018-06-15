@@ -16,5 +16,10 @@ docker run --rm -it -v $(pwd)/roster:/etc/salt/roster jweinstock/salt-ssh
 ```sh
 salt-ssh 'entry_in_roster' -i state.apply docker
 ```     
+
 ###### Source Repo
 [https://github.com/jacobweinstock/salt-ssh](https://github.com/jacobweinstock/salt-ssh)
+
+###### Docker Image
+[https://hub.docker.com/r/jweinstock/salt-ssh/](https://hub.docker.com/r/jweinstock/salt-ssh/)
+`docker pull jweinstock/salt-ssh`
