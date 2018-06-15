@@ -1,0 +1,6 @@
+# required because of https://github.com/saltstack/salt/pull/16733
+salt-ssh:
+  extra_filerefs:
+    - salt://docker/map.jinja
+    - salt://docker/codenamemap.yaml
+    - salt://docker/defaults.yaml
