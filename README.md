@@ -1,9 +1,9 @@
 ## Salt-SSH in a Container
-Run salt-ssh in a container. Initially seeded with docker formula.
+Run salt-ssh in a container. Initially seeded with a docker formula.
 * Create a file name `roster`. Use the roster.example file as a reference.
 * Add any pillar data to `/srv/pillar`
 * Add any salt formulas to `/srv/salt`
-* Add additional formulas by adding them to `/srv/pillar/deps.sls` and rebuilt the image
+* Seed additional formulas by adding them to `/srv/pillar/deps.sls`
 
 ###### Build the image
 ```bash
