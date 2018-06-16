@@ -14,9 +14,10 @@ RUN apk --no-cache --update add python2=2.7.14-r0 openssl openssh py2-pip \
  && apk add --virtual build-dependencies python2-dev=2.7.14-r0 musl-dev gcc libffi-dev openssl-dev \
  && pip install --no-cache-dir ${DEPS} \
  && apk --purge del build-dependencies \
- && rm -rf /var/cache/apk/* /root/.cache
+ && rm -rf /var/cache/apk/* /root/.cache \
+ && mkdir -p /srv/salt
 
-ADD ./Saltfile /
+ADD ./Saltfile ./entrypoint.sh /
 ADD ./srv/ /srv/
 
-CMD ["/bin/sh"]
+CMD ["/bin/sh", "/entrypoint.sh"]

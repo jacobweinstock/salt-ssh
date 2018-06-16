@@ -1,3 +1,4 @@
 base:
   '*':
+    - deps
     - docker
