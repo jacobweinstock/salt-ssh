@@ -14,7 +14,8 @@ docker run --rm -it -v $(pwd)/roster:/etc/salt/roster jweinstock/salt-ssh
 ```
 ###### Run salt-ssh commands
 ```sh
-salt-ssh 'entry_in_roster' -i state.apply docker.host
+salt-ssh -i 'test' state.apply config
+salt-ssh -i 'test' state.apply docker.host
 ```     
 
 ###### Source Repo
