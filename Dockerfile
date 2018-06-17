@@ -3,7 +3,8 @@
 # docker run --rm -it -v $(pwd)/roster:/etc/salt/roster jweinstock/salt-ssh
 #
 # Run salt-ssh commands:
-# salt-ssh 'entry_in_roster' -i state.apply docker
+# salt-ssh -i 'entry_in_roster' state.apply docker.host
+# salt-ssh -i 'entry_in_roster' state.apply docker.client.container
 FROM alpine:3.6
 LABEL maintainer "Jacob Weinstock <jakobweinstock@gmail.com>"
 

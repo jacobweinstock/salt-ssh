@@ -2,5 +2,3 @@
 salt-ssh:
   extra_filerefs:
     - salt://docker/map.jinja
-    - salt://docker/codenamemap.yaml
-    - salt://docker/defaults.yaml

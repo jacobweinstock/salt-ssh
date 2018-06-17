@@ -1,4 +1,4 @@
 base:
   '*':
     - deps
-    - docker
+    - data

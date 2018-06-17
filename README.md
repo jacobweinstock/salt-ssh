@@ -1,9 +1,8 @@
 ## Salt-SSH in a Container
-Run salt-ssh in a container. Initially seeded with a [docker formula](https://github.com/jacobweinstock/docker-formula).
-* Create a file name `roster`. Use the roster.example file as a reference.
-* Add any pillar data to `/srv/pillar`
-* Add any salt formulas to `/srv/salt`
-* Seed additional formulas by adding them to `/srv/pillar/deps.sls`
+Run salt-ssh in a container. Initially seeded with a [docker formula](https://github.com/salt-formulas/salt-formula-docker.git).
+* Create a file name `roster`. Use the roster.example file as a reference. Map it into the docker container `-v ${PWD}/roster:/etc/salt/roster`.
+* The container is setup to pull pillar data from git repo(s). Add the git repo to `/srv/pillar/deps.sls`.
+* The container is setup to pull salt formulas from git repo(s). Add the git repo to `/srv/pillar/deps.sls`.
 
 ###### Build the image
 ```bash
@@ -15,7 +14,7 @@ docker run --rm -it -v $(pwd)/roster:/etc/salt/roster jweinstock/salt-ssh
 ```
 ###### Run salt-ssh commands
 ```sh
-salt-ssh 'entry_in_roster' -i state.apply docker
+salt-ssh 'entry_in_roster' -i state.apply docker.host
 ```     
 
 ###### Source Repo
