@@ -8,7 +8,7 @@
 FROM alpine:3.6
 LABEL maintainer "Jacob Weinstock <jakobweinstock@gmail.com>"
 
-ENV DEPS salt-ssh==2018.3.1 pyopenssl==18.0.0
+ENV DEPS salt-ssh==2019.2.0 pyopenssl==18.0.0
 
 # install musl-dev gcc as dependencies for installing gevent
 RUN apk --no-cache --update add python2=2.7.14-r0 openssl openssh py2-pip \
